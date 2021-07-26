@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Dineral</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/svg.svg">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Kelly - v4.3.0
+  * Template URL: https://bootstrapmade.com/kelly-free-bootstrap-cv-resume-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  <style>
+    .float{
+    position:fixed;
+    width:60px;
+    height:60px;
+    bottom: 75px;
+      right: 16px;
+    background-color:#4cc370;
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+    font-size:30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index:100;
+  }
+  .float:hover {
+    text-decoration: none;
+    color: #fff;
+    background-color:#3d9e5a;
+  }
+  
+  .my-float{
+    margin-top:16px;
+  }
+  
+  @import url("https://fonts.googleapis.com/css?family=Roboto");
+  /* offset-x > | offset-y ^| blur-radius | spread-radius | color */
+  @keyframes pulse {
+    0% {
+      transform: scale(1, 1);
+    }
+    50% {
+      opacity: 0.3;
+    }
+    100% {
+      transform: scale(1.45);
+      opacity: 0;
+    }
+  }
+  .pulse {
+    -webkit-animation-name: pulse;
+    animation-name: pulse;
+  }
+  
+  .nav-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-content: flex-end;
+    width: auto;
+    height: auto;
+    position: fixed;
+    z-index: 8;
+    bottom: 60px;
+    right: 0px;
+    padding: 5px;
+    margin: 0px;
+  }
+  @media (max-width: 360px) {
+    .nav-bottom {
+      width: 320px;
+    }
+  }
+  
+  .whatsapp-button {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 60px;
+    height: 60px;
+    z-index: 8;
+    transition: .3s;
+    margin: 10px;
+    padding: 7px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: white;
+    /* offset-x > | offset-y ^| blur-radius | spread-radius | color */
+    -webkit-box-shadow: 1px 1px 6px 0px rgba(68, 68, 68, 0.705);
+    -moz-box-shadow: 1px 1px 6px 0px rgba(68, 68, 68, 0.705);
+    box-shadow: 1px 1px 6px 0px rgba(68, 68, 68, 0.705);
+  }
+  
+  .circle-anime {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-content: center;
+    width: 60px;
+    height: 60px;
+    top: 15px;
+    right: 15px;
+    border-radius: 50%;
+    transition: .3s;
+    background-color: #77bb4a;
+    animation: pulse 1.2s 4.0s ease 4;
+  }
+  
+  .popup-whatsapp {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    bottom: 85px;
+    right: 6px;
+    transition: .5s;
+    border-radius: 10px;
+    background-color: white;
+    /* offset-x > | offset-y ^| blur-radius | spread-radius | color */
+    -webkit-box-shadow: 2px 1px 6px 0px rgba(68, 68, 68, 0.705);
+    -moz-box-shadow: 2px 1px 6px 0px rgba(68, 68, 68, 0.705);
+    box-shadow: 2px 1px 6px 0px rgba(68, 68, 68, 0.705);
+    animation: slideInRight .6s 0.0s both;
+  }
+  .popup-whatsapp > div {
+    margin: 5px;
+  }
+  @media (max-width: 680px) {
+    .popup-whatsapp p {
+      font-size: 0.9em;
+    }
+  }
+  .popup-whatsapp > .content-whatsapp.-top {
+    display: flex;
+    flex-direction: column;
+  }
+  .popup-whatsapp > .content-whatsapp.-top p {
+    color: #585858;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 1.0em;
+  }
+  .popup-whatsapp > .content-whatsapp.-bottom {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .closePopup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 28px;
+    height: 28px;
+    margin: 0px 0px 15px 0px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #4cc370;
+    -webkit-box-shadow: 1px 1px 2px 0px rgba(68, 68, 68, 0.705);
+    -moz-box-shadow: 1px 1px 2px 0px rgba(68, 68, 68, 0.705);
+    box-shadow: 1px 1px 2px 0px rgba(68, 68, 68, 0.705);
+  }
+  .closePopup:hover {
+    background-color: #3d9e5a;
+    transition: .3s;
+  }
+  
+  .send-msPopup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    margin: 0px 0px 0px 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    -webkit-box-shadow: 1px 1px 2px 0px rgba(68, 68, 68, 0.705);
+    -moz-box-shadow: 1px 1px 2px 0px rgba(68, 68, 68, 0.705);
+    box-shadow: 1px 1px 2px 0px rgba(68, 68, 68, 0.705);
+  }
+  .send-msPopup:hover {
+    background-color: #f8f8f8;
+    transition: .3s;
+  }
+  
+  .is-active-whatsapp-popup {
+    display: flex;
+    animation: slideInRight .6s 0.0s both;
+    background-color: #fafafa;
+  }
+  
+  input.whats-input[type=text] {
+    width: 250px;
+    height: 40px;
+    box-sizing: border-box;
+    border: 0px solid #ffffff;
+    border-radius: 20px;
+    font-size: 1em;
+    background-color: #ffffff;
+    padding: 0px 0px 0px 10px;
+    -webkit-transition: width 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out;
+    outline: none;
+    transition: .3s;
+  }
+  @media (max-width: 420px) {
+    input.whats-input[type=text] {
+      width: 225px;
+    }
+  }
+  input.whats-input::placeholder {
+    /* Most modern browsers support this now. */
+    color: rgba(68, 68, 68, 0.705);
+    opacity: 1;
+  }
+  input.whats-input[type=text]:focus {
+    background-color: #f8f8f8;
+    -webkit-transition: width 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out;
+    transition: .3s;
+  }
+  
+  .icon-whatsapp-small {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .icon-whatsapp {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .icon-font-color {
+    color: #ffffff;
+  }
+  
+  .icon-font-color--black {
+    color: #333333;
+  }
+  </style>
+
+  <!-- whatapp -->
+  <link rel="stylesheet" href="whats.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="whats2.css">
+</head>
+
+<body>
+  <div class="nav-bottom">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+rel="stylesheet">
+     <div class="popup-whatsapp fadeIn">
+         <div class="content-whatsapp -top"><button type="button" class="closePopup">
+               <i class="material-icons icon-font-color">close</i>
+             </button> 
+           
+            <p>  <img src="secretary.png" width="50">  Hola, ¿en que podemos ayudarle? </p>
+            
+         </div>
+         <div class="content-whatsapp -bottom">
+           <input class="whats-input" id="whats-in" type="text" Placeholder="Enviar mensaje..." />
+            
+            
+           
+   
+             <button class="send-msPopup" id="send-btn" type="button">
+                 <i class="material-icons icon-font-color--black">send</i>
+             </button>
+
+         </div>
+     </div>
+     <button type="button" id="whats-openPopup" class="whatsapp-button">
+         <div class="float" >
+<i class="fa fa-whatsapp my-float"></i></div>
+     </button>
+     <div class="circle-anime"></div>
+ </div>
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+
+      <h1 class="logo me-auto me-lg-0"><a href="index.html">Dineral</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="active" href="index.html">Inicio</a></li>
+          <li><a href="quieromiPrestamo.html">Quiero mi prestamo!</a></li>
+          <li><a href="requisitos.html">Requisitos</a></li>
+          <li><a href="contacto.html">Contacto y Legales</a></li>
+          <li><a href="simulador.html">Simulador de credito</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <div class="header-social-links">
+        
+        <a href="https://www.facebook.com/Dineral-Cr%C3%A9ditos-244615153122636/" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/dineral.argentina/?igshid=dvk22tfokazw" class="instagram"><i class="bi bi-instagram"></i></a>
+        
+      </div>
+
+    </div>
+
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>MINIMOS REQUISITOS PARA OBTENER TU CREDITO</h2>
+            <p>✔SER MAYOR DE 18 AÑOS</p>
+            <p> ✔SER TITULAR DE CUENTA SUELDO</p>
+            <p> ✔TENER DNI ARGENTINO O RESIDENTE</p>
+            <br>
+            <a href="quieromiPrestamo.html"  class="btn-about">Quiero mi credito!</a>
+        </div>
+
+       
+        
+
+      </div>
+    </section><!-- End Contact Section -->
+
+
+     <!-- ======= Facts Section ======= -->
+     <section id="facts" class="facts">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Hechos</h2>
+          <p>Nuestra Estadistica sobre el mercado en 2021 indica que estamos haciendo bien nuestro trabajo</p>
+        </div>
+
+        <div class="row counters">
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="232" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Nuevos Clientes</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="521" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Clientes Referidos</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="1463" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Créditos Aprobados</p>
+          </div>
+
+          <div class="col-lg-3 col-6 text-center">
+            <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter"></span>
+            <p>Créditos Corporativos</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Facts Section -->
+
+     <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials">
+        <div class="container" data-aos="fade-up">
+  
+          <div class="section-title">
+            <h2>Testimonios</h2>
+            <p> ¿Qué dicen nuestros clientes sobre nosotros?, Nuestros clientes hablan por si solos 
+              </p>
+          </div>
+  
+          <div class="testimonials-slider swiper-container" data-aos="fade-up" data-aos-delay="100">
+            <div class="swiper-wrapper">
+  
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                  <h3>Héctor P.</h3>
+                  <h4>"súper rápido"</h4>
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    La verdad que fue súper rápido y sencillo acceder al crédito. En pocos minutos tuve el dinero en mi cuenta.
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                </div>
+              </div><!-- End testimonial item -->
+  
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                  <h3>Victor Daniel S.</h3>
+                  <h4>"La página está genial"</h4>
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    La página está genial, super dinámica, super ágil. Muchas gracias!
+              
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                </div>
+              </div><!-- End testimonial item -->
+  
+           
+  
+              <div class="swiper-slide">
+                <div class="testimonial-item">
+                  <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                  <h3>Matt Brandon</h3>
+                  <h4>"Increíble!"</h4>
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    Increíble! En pocos minutos se me acreditaron los fondos en la cuenta. Super agradecido a Pareto.
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                </div>
+              </div><!-- End testimonial item -->
+  
+  
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+  
+        </div>
+      </section><!-- End Testimonials Section -->
+  
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Dineral</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/kelly-free-bootstrap-cv-resume-html-template/ -->
+        Designed by <a href="index.html">Jonatan Severo and Javier Vergara</a>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+   <!-- whatapp -->
+   <script>
+
+    popupWhatsApp = () => {
+      
+      let btnClosePopup = document.querySelector('.closePopup');
+      let btnOpenPopup = document.querySelector('.whatsapp-button');
+      let popup = document.querySelector('.popup-whatsapp');
+      let sendBtn = document.getElementById('send-btn');
+    
+      btnClosePopup.addEventListener("click",  () => {
+        popup.classList.toggle('is-active-whatsapp-popup')
+      })
+      
+      btnOpenPopup.addEventListener("click",  () => {
+        popup.classList.toggle('is-active-whatsapp-popup')
+         popup.style.animation = "fadeIn .6s 0.0s both";
+      })
+      
+      sendBtn.addEventListener("click", () => {
+      let msg = document.getElementById('whats-in').value;
+      let relmsg = msg.replace(/ /g,"%20");
+         
+       window.open('https://api.whatsapp.com/send?phone=541125150444'+relmsg, '_blank'); 
+      
+      });
+    
+      setTimeout(() => {
+        popup.classList.toggle('is-active-whatsapp-popup');
+      }, 3000);
+    }
+    
+    popupWhatsApp();
+      </script>
+
+</body>
+
+</html>

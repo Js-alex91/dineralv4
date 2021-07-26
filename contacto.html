@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Dineral</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/svg+xml" href="assets/img/svg.svg">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- whatapp -->
+  <link rel="stylesheet" href="whats.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="whats2.css">
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Kelly - v4.3.0
+  * Template URL: https://bootstrapmade.com/kelly-free-bootstrap-cv-resume-html-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+  <style>
+    .float{
+    position:fixed;
+    width:60px;
+    height:60px;
+    bottom: 75px;
+      right: 16px;
+    background-color:#4cc370;
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+    font-size:30px;
+    box-shadow: 2px 2px 3px #999;
+    z-index:100;
+  }
+  .float:hover {
+    text-decoration: none;
+    color: #fff;
+    background-color:#3d9e5a;
+  }
+  
+  .my-float{
+    margin-top:16px;
+  }
+  
+  @import url("https://fonts.googleapis.com/css?family=Roboto");
+  /* offset-x > | offset-y ^| blur-radius | spread-radius | color */
+  @keyframes pulse {
+    0% {
+      transform: scale(1, 1);
+    }
+    50% {
+      opacity: 0.3;
+    }
+    100% {
+      transform: scale(1.45);
+      opacity: 0;
+    }
+  }
+  .pulse {
+    -webkit-animation-name: pulse;
+    animation-name: pulse;
+  }
+  
+  .nav-bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-content: flex-end;
+    width: auto;
+    height: auto;
+    position: fixed;
+    z-index: 8;
+    bottom: 60px;
+    right: 0px;
+    padding: 5px;
+    margin: 0px;
+  }
+  @media (max-width: 360px) {
+    .nav-bottom {
+      width: 320px;
+    }
+  }
+  
+  .whatsapp-button {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 60px;
+    height: 60px;
+    z-index: 8;
+    transition: .3s;
+    margin: 10px;
+    padding: 7px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 50%;
+    background-color: white;
+    /* offset-x > | offset-y ^| blur-radius | spread-radius | color */
+    -webkit-box-shadow: 1px 1px 6px 0px rgba(68, 68, 68, 0.705);
+    -moz-box-shadow: 1px 1px 6px 0px rgba(68, 68, 68, 0.705);
+    box-shadow: 1px 1px 6px 0px rgba(68, 68, 68, 0.705);
+  }
+  
+  .circle-anime {
+    display: flex;
+    position: absolute;
+    justify-content: center;
+    align-content: center;
+    width: 60px;
+    height: 60px;
+    top: 15px;
+    right: 15px;
+    border-radius: 50%;
+    transition: .3s;
+    background-color: #77bb4a;
+    animation: pulse 1.2s 4.0s ease 4;
+  }
+  
+  .popup-whatsapp {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: auto;
+    height: auto;
+    padding: 10px;
+    bottom: 85px;
+    right: 6px;
+    transition: .5s;
+    border-radius: 10px;
+    background-color: white;
+    /* offset-x > | offset-y ^| blur-radius | spread-radius | color */
+    -webkit-box-shadow: 2px 1px 6px 0px rgba(68, 68, 68, 0.705);
+    -moz-box-shadow: 2px 1px 6px 0px rgba(68, 68, 68, 0.705);
+    box-shadow: 2px 1px 6px 0px rgba(68, 68, 68, 0.705);
+    animation: slideInRight .6s 0.0s both;
+  }
+  .popup-whatsapp > div {
+    margin: 5px;
+  }
+  @media (max-width: 680px) {
+    .popup-whatsapp p {
+      font-size: 0.9em;
+    }
+  }
+  .popup-whatsapp > .content-whatsapp.-top {
+    display: flex;
+    flex-direction: column;
+  }
+  .popup-whatsapp > .content-whatsapp.-top p {
+    color: #585858;
+    font-family: 'Roboto';
+    font-weight: 400;
+    font-size: 1.0em;
+  }
+  .popup-whatsapp > .content-whatsapp.-bottom {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .closePopup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 28px;
+    height: 28px;
+    margin: 0px 0px 15px 0px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background-color: #4cc370;
+    -webkit-box-shadow: 1px 1px 2px 0px rgba(68, 68, 68, 0.705);
+    -moz-box-shadow: 1px 1px 2px 0px rgba(68, 68, 68, 0.705);
+    box-shadow: 1px 1px 2px 0px rgba(68, 68, 68, 0.705);
+  }
+  .closePopup:hover {
+    background-color: #3d9e5a;
+    transition: .3s;
+  }
+  
+  .send-msPopup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    margin: 0px 0px 0px 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    -webkit-box-shadow: 1px 1px 2px 0px rgba(68, 68, 68, 0.705);
+    -moz-box-shadow: 1px 1px 2px 0px rgba(68, 68, 68, 0.705);
+    box-shadow: 1px 1px 2px 0px rgba(68, 68, 68, 0.705);
+  }
+  .send-msPopup:hover {
+    background-color: #f8f8f8;
+    transition: .3s;
+  }
+  
+  .is-active-whatsapp-popup {
+    display: flex;
+    animation: slideInRight .6s 0.0s both;
+    background-color: #fafafa;
+  }
+  
+  input.whats-input[type=text] {
+    width: 250px;
+    height: 40px;
+    box-sizing: border-box;
+    border: 0px solid #ffffff;
+    border-radius: 20px;
+    font-size: 1em;
+    background-color: #ffffff;
+    padding: 0px 0px 0px 10px;
+    -webkit-transition: width 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out;
+    outline: none;
+    transition: .3s;
+  }
+  @media (max-width: 420px) {
+    input.whats-input[type=text] {
+      width: 225px;
+    }
+  }
+  input.whats-input::placeholder {
+    /* Most modern browsers support this now. */
+    color: rgba(68, 68, 68, 0.705);
+    opacity: 1;
+  }
+  input.whats-input[type=text]:focus {
+    background-color: #f8f8f8;
+    -webkit-transition: width 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out;
+    transition: .3s;
+  }
+  
+  .icon-whatsapp-small {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .icon-whatsapp {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .icon-font-color {
+    color: #ffffff;
+  }
+  
+  .icon-font-color--black {
+    color: #333333;
+  }
+  </style>
+</head>
+
+<body>
+
+  <div class="nav-bottom">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+rel="stylesheet">
+     <div class="popup-whatsapp fadeIn">
+         <div class="content-whatsapp -top"><button type="button" class="closePopup">
+               <i class="material-icons icon-font-color">close</i>
+             </button> 
+           
+            <p>  <img src="secretary.png" width="50">  Hola, ¿en que podemos ayudarle? </p>
+            
+         </div>
+         <div class="content-whatsapp -bottom">
+           <input class="whats-input" id="whats-in" type="text" Placeholder="Enviar mensaje..." />
+            
+            
+           
+   
+             <button class="send-msPopup" id="send-btn" type="button">
+                 <i class="material-icons icon-font-color--black">send</i>
+             </button>
+
+         </div>
+     </div>
+     <button type="button" id="whats-openPopup" class="whatsapp-button">
+         <div class="float" >
+<i class="fa fa-whatsapp my-float"></i></div>
+     </button>
+     <div class="circle-anime"></div>
+ </div>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container-fluid d-flex justify-content-between align-items-center">
+
+      <h1 class="logo me-auto me-lg-0"><a href="index.html">Dineral</a></h1>
+      <!-- Uncomment below if you prefer to use an image logo -->
+      <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="active" href="index.html">Inicio</a></li>
+          <li><a href="quieromiPrestamo.html">Quiero mi prestamo!</a></li>
+          <li><a href="requisitos.html">Requisitos</a></li>
+          <li><a href="contacto.html">Contacto y Legales</a></li>
+          <li><a href="simulador.html">Simulador de credito</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <div class="header-social-links">
+        
+        <a href="https://www.facebook.com/Dineral-Cr%C3%A9ditos-244615153122636/" class="facebook"><i class="bi bi-facebook"></i></a>
+        <a href="https://www.instagram.com/dineral.argentina/?igshid=dvk22tfokazw" class="instagram"><i class="bi bi-instagram"></i></a>
+        
+      </div>
+
+    </div>
+
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Contact Section ======= -->
+    <section id="contact" class="contact">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Legales</h2>
+          <p>PRÉSTAMOS PERSONALES DINERO AL INSTANTE SA - Martin fierro 3290, oficina 220, Parque Leloir - Tel: +54-9-11-2515-0444 CUIT 30-71625018-7 Préstamos personales cuotas fijas en pesos: máximo $ 50.000, mínimo $ 5.000. Plazo: máximo 24 meses, mínimo 6 meses. Tasa Nominal Anual (TNA): máxima 165%, mínima 84%. Comisión por cancelación anticipada: 0% sobre monto a cancelar. Ejemplo de préstamo de $ 5.000 en 9 cuotas fijas: Cuotas de $ 890. TEM 7%, TNA 84%, CFT 124,89% Valores expresados en Pesos Argentinos. Las cuotas incluyen IVA, gastos administrativos e impuesto a los sellos de corresponder. La falta en pago en término de las cuotas se encuentra sujeta a la aplicación de intereses punitorios. La aprobación del crédito se encuentra sujeta a análisis crediticio. Promociones vigentes hasta el 31/09/2018 PROTECCION DE DATOS PERSONALES El titular de los datos personales tiene la facultad de ejercer el derecho de acceso a los mismos en forma gratuita a intervalos no inferiores a seis meses, salvo que se acredite un interés legítimo al efecto, conforme lo establecido en el articulo 14, inciso 3 de la Ley 25.326. La DIRECCIÓN NACIONAL DE PROTECCIÓN DE DATOS PERSONALES, órgano de control de la ley 25.326, tiene la atribución de atender las denuncias y reclamos que se interpongan con relacion al incumplimiento de las normas sobre protección de datos personales. ATENCION DE USUARIOS DE SERVICIOS FINANCIEROS Usted podrá realizar su consulta, reclamo o sugerencia personalmente en nuestras sucursales, o bien telefónicamente al número +54-9-11-2515-0444 o escribiéndonos a la dirección Av. Martin fierro 3290, oficina 220, Parque Leloir, Vía mail: info@dineral.com.ar Tu consulta y/o reclamo será evacuada/o dentro de los 20 días hábiles a partir de su recepción. Excepto cuando medien causas ajenas al mismo debidamente justificados. En caso de falta de respuesta y/o disconformidad con la misma, podrás dirigirte al Banco Central de la República Argentina quién dispone de un Centro de Atención al Usuario de Servicios Financieros: teléfono 0800-999-6663. B.C.R.A. Comunicación A 5388</p>
+        </div>
+
+        <div>
+          <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.1519837800633!2d-58.697370584360485!3d-34.62559936616396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcbe54f192c717%3A0x3da9cd0b9ebaf482!2sMart%C3%ADn%20Fierro%203290%2C%20B1713%20Udaondo%2C%20Provincia%20de%20Buenos%20Aires!5e0!3m2!1ses-419!2sar!4v1625476149660!5m2!1ses-419!2sar" frameborder="0" allowfullscreen></iframe>
+          
+        </div>
+
+        <div class="row mt-5">
+
+          <div class="col-lg-4">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>DIRECCION:</h4>
+                <p>DINERO AL INSTANTE SA - Martin fierro 3290, oficina 220, Parque Leloir</p>
+              </div>
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>EMAIL:</h4>
+                <p>info@example.com</p>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>TELEFONO:</h4>
+                <p>Tel: +54-9-11-2515-0444</p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-8 mt-5 mt-lg-0">
+
+            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Nombre" required>
+                </div>
+                <div class="col-md-6 form-group mt-3 mt-md-0">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Email" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Asunto" required>
+              </div>
+              <div class="form-group mt-3">
+                <textarea class="form-control" name="message" rows="5" placeholder="Mensaje" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Enviar</button></div>
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Dineral</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/kelly-free-bootstrap-cv-resume-html-template/ -->
+        Designed by <a href="index.html">Jonatan Severo and Javier Vergara</a>
+      </div>
+    </div>
+  </footer><!-- End  Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/purecounter/purecounter.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+   <!-- whatapp -->
+   <script>
+
+    popupWhatsApp = () => {
+      
+      let btnClosePopup = document.querySelector('.closePopup');
+      let btnOpenPopup = document.querySelector('.whatsapp-button');
+      let popup = document.querySelector('.popup-whatsapp');
+      let sendBtn = document.getElementById('send-btn');
+    
+      btnClosePopup.addEventListener("click",  () => {
+        popup.classList.toggle('is-active-whatsapp-popup')
+      })
+      
+      btnOpenPopup.addEventListener("click",  () => {
+        popup.classList.toggle('is-active-whatsapp-popup')
+         popup.style.animation = "fadeIn .6s 0.0s both";
+      })
+      
+      sendBtn.addEventListener("click", () => {
+      let msg = document.getElementById('whats-in').value;
+      let relmsg = msg.replace(/ /g,"%20");
+         
+       window.open('https://api.whatsapp.com/send?phone=541125150444'+relmsg, '_blank'); 
+      
+      });
+    
+      setTimeout(() => {
+        popup.classList.toggle('is-active-whatsapp-popup');
+      }, 3000);
+    }
+    
+    popupWhatsApp();
+      </script>
+
+</body>
+
+</html>
